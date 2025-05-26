@@ -18,27 +18,129 @@
             
             echo "<h2>Użytkownicy:</h2><table style=\"border: 2px\"><tbody><tr>";
             $wynik = pg_query($dbh,"SELECT * FROM users;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
-            echo "</tr></tbody></table>Works! :)<br>";
+            $liczba_kolumn = pg_num_fields($wynik);
+            $liczba_wierszy = pg_num_rows($wynik);
+            for($k =0;$k<$liczba_kolumn;$k++) {
+                echo "<td>";
+                echo pg_field_name($wynik,$k);
+                echo "</td>";
+            }
+            echo "</tr>";
+            for($w =0;$w<$liczba_wierszy;$w++) {
+                echo "<tr>";
+                for($k =0;$k<$liczba_kolumn;$k++) {
+                    echo "<td>";
+                    echo pg_fetch_result($wynik,$w,$k);
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
             
             echo "<h2>Mody:</h2><table style=\"border: 2px\"><tbody><tr>";
             $wynik = pg_query($dbh,"SELECT * FROM mods;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
-            echo "</tr></tbody></table>Works! :)<br>";
+            $liczba_kolumn = pg_num_fields($wynik);
+            $liczba_wierszy = pg_num_rows($wynik);
+            for($k =0;$k<$liczba_kolumn;$k++) {
+                echo "<td>";
+                echo pg_field_name($wynik,$k);
+                echo "</td>";
+            }
+            echo "</tr>";
+            for($w =0;$w<$liczba_wierszy;$w++) {
+                echo "<tr>";
+                for($k =0;$k<$liczba_kolumn;$k++) {
+                    echo "<td>";
+                    echo pg_fetch_result($wynik,$w,$k);
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
             
             echo "<h2>Feedback (wersja bezpośrednia):</h2><table style=\"border: 2px\"><tbody><tr>";
             $wynik = pg_query($dbh,"SELECT * FROM feedbacks;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
-            echo "</tr></tbody></table>Works! :)<br>";
+            $liczba_kolumn = pg_num_fields($wynik);
+            $liczba_wierszy = pg_num_rows($wynik);
+            for($k =0;$k<$liczba_kolumn;$k++) {
+                echo "<td>";
+                echo pg_field_name($wynik,$k);
+                echo "</td>";
+            }
+            echo "</tr>";
+            for($w =0;$w<$liczba_wierszy;$w++) {
+                echo "<tr>";
+                for($k =0;$k<$liczba_kolumn;$k++) {
+                    echo "<td>";
+                    echo pg_fetch_result($wynik,$w,$k);
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
             
             echo "<h2>Dependencje (wersja bezpośrednia):</h2><table style=\"border: 2px\"><tbody><tr>";
             $wynik = pg_query($dbh,"SELECT * FROM dependencies;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
-            echo "</tr></tbody></table>Works! :)<br>";
+            $liczba_kolumn = pg_num_fields($wynik);
+            $liczba_wierszy = pg_num_rows($wynik);
+            for($k =0;$k<$liczba_kolumn;$k++) {
+                echo "<td>";
+                echo pg_field_name($wynik,$k);
+                echo "</td>";
+            }
+            echo "</tr>";
+            for($w =0;$w<$liczba_wierszy;$w++) {
+                echo "<tr>";
+                for($k =0;$k<$liczba_kolumn;$k++) {
+                    echo "<td>";
+                    echo pg_fetch_result($wynik,$w,$k);
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
             
             echo "<h2>Feedback (wersja wygodna dla człowieka):</h2><table style=\"border: 2px\"><tbody><tr>";
             $wynik = pg_query($dbh,"SELECT * FROM readable_feedbacks;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
-            echo "</tr></tbody></table>Works! :)<br>";
+            $liczba_kolumn = pg_num_fields($wynik);
+            $liczba_wierszy = pg_num_rows($wynik);
+            for($k =0;$k<$liczba_kolumn;$k++) {
+                echo "<td>";
+                echo pg_field_name($wynik,$k);
+                echo "</td>";
+            }
+            echo "</tr>";
+            for($w =0;$w<$liczba_wierszy;$w++) {
+                echo "<tr>";
+                for($k =0;$k<$liczba_kolumn;$k++) {
+                    echo "<td>";
+                    echo pg_fetch_result($wynik,$w,$k);
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
             
             echo "<h2>Mody (wersja wygodna dla człowieka):</h2><table style=\"border: 2px\"><tbody><tr>";
             $wynik = pg_query($dbh,"SELECT * FROM readable_mods;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
-            echo "</tr></tbody></table>Works! :)<br>";
+            $liczba_kolumn = pg_num_fields($wynik);
+            $liczba_wierszy = pg_num_rows($wynik);
+            for($k =0;$k<$liczba_kolumn;$k++) {
+                echo "<td>";
+                echo pg_field_name($wynik,$k);
+                echo "</td>";
+            }
+            echo "</tr>";
+            for($w =0;$w<$liczba_wierszy;$w++) {
+                echo "<tr>";
+                for($k =0;$k<$liczba_kolumn;$k++) {
+                    echo "<td>";
+                    echo pg_fetch_result($wynik,$w,$k);
+                    echo "</td>";
+                }
+                echo "</tr>";
+            }
+            echo "</tbody></table>";
             
             echo "<h2>Dependencje (wersja wygodna dla człowieka):</h2><table style=\"border: 2px\"><tbody><tr>";
             echo "</tr></tbody></table>Brak takowej :&lt;<br>";
