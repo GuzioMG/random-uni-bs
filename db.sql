@@ -43,9 +43,6 @@ CREATE TABLE dependencies (
 );
 INSERT INTO dependencies (parent_id,child_id) VALUES (3,2);
 
-CREATE VIEW readable_feedbacks AS SELECT mods.mod_display_name,users.username,feedbacks.rating,feedbacks.text_content FROM feedbacks,users,mods WHERE mods.id = feedbacks.mod_id AND users.id = feedbacks.posted_by;
-CREATE VIEW readable_mods AS SELECT mods.mod_display_name,users.username,mods.extra_text FROM users,mods WHERE users.id = mods.added_by;
-
 CREATE FUNCTION avg_rating(int) RETURNS numeric(3,2) LANGUAGE plpgsql AS $$
     DECLARE
     counted_avg numeric(3,2);
@@ -60,6 +57,9 @@ CREATE FUNCTION avg_rating(int) RETURNS numeric(3,2) LANGUAGE plpgsql AS $$
         RETURN counted_avg;
     END;
 $$;
+
+CREATE VIEW readable_feedbacks AS SELECT mods.mod_display_name,users.username,feedbacks.rating,feedbacks.text_content FROM feedbacks,users,mods WHERE mods.id = feedbacks.mod_id AND users.id = feedbacks.posted_by;
+CREATE VIEW readable_mods AS SELECT mods.mod_display_name,users.username,avg_rating(mods.id),mods.extra_text FROM users,mods WHERE users.id = mods.added_by;
 
 
 
