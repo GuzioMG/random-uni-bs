@@ -42,6 +42,7 @@
             
             echo "<h2>Dependencje (wersja wygodna dla człowieka):</h2><table style=\"border: 2px\"><tbody><tr>";
             echo "</tr></tbody></table>Brak takowej :&lt;<br>";
+            pg_close($dbh);
         ?>
     </body>
 </html>
