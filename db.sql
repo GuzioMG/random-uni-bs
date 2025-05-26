@@ -3,7 +3,7 @@
 
 CREATE TABLE users (
     id serial PRIMARY KEY,
-    username varchar(16) NOT NULL,
+    username varchar(16) NOT NULL UNIQUE,
     plaintext_password varchar(512) NOT NULL,
     is_admin bool NOT NULL
 );
