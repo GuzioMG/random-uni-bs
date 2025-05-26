@@ -5,9 +5,7 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <hr>
-            <h1> PHANTOM </h1>
-        </hr>
+        <h1> PHANTOM </h1>
         Witamy w systemie PHANTOM! <br>
         Tutaj miała znajdować się strona logowania, ale z powodu „cięć budżetowych” nie udało nam się tego zaimplementować. Ponieważ nie ma żadnego systemu autoryzacji dostępu, strona została ograniczona do statycznego wyświetlania tabel z naszej bazy danych, żeby żaden griefer nie przyszedł i nie popsuł. <br>
         Życzymy miłego pobytu! <br>

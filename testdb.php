@@ -5,9 +5,7 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <hr>
-            <h1> TEST </h1>
-        </hr>
+        <h1> TEST </h1>
         <?php
             // tu umieszczamy kod skryptu
             // Połączmy się z bazą danych i rozłączmy się z nią
