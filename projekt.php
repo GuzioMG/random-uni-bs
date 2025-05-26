@@ -16,7 +16,7 @@
             $dbh = pg_connect("dbname=projekt_guzio user=guzio password=Tf0jaStara;) host=localhost")
             or die("Nie mogę połączyć się z bazą danych!</body></html>");
             echo "<h2>Dane:</h2><table style=\"border: 2px\"><tbody><tr>";
-            $wynik = pg_query($dbh,"SELECT * FROM klient;") or die("</tr></tbody></table>Nie można wczytać danych. :< </body></html>");
+            $wynik = pg_query($dbh,"SELECT * FROM klient;") or die("</tr></tbody></table>Nie można wczytać danych. :&lt;</body></html>");
         ?>
     </body>
 </html>
